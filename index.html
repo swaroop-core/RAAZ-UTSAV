@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dandiya Raas 2026 | Hubli</title>
+<title>RAAZ UTSAV | Dandiya Raas 2026 | Hubballi</title>
 
 <style>
 *{
@@ -14,10 +14,18 @@
     font-family:Arial,Helvetica,sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#080808;
-    color:white;
+    background:#08050b;
+    color:#fff;
     line-height:1.6;
+}
+
+a{
+    color:inherit;
 }
 
 .hero{
@@ -26,45 +34,83 @@ body{
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:30px 20px;
+    padding:40px 20px;
     background:
-    radial-gradient(circle at top,#7b1fa2 0%,#21002f 35%,#080808 75%);
+        radial-gradient(circle at 50% 10%,#b72cff 0%,#4b0870 25%,#170522 55%,#08050b 85%);
+    position:relative;
+    overflow:hidden;
 }
 
-.container{
+.hero:before,
+.hero:after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.35;
+}
+
+.hero:before{
+    width:250px;
+    height:250px;
+    background:#ff2f92;
+    top:-80px;
+    left:-80px;
+}
+
+.hero:after{
+    width:300px;
+    height:300px;
+    background:#7b2cff;
+    right:-120px;
+    bottom:-100px;
+}
+
+.hero-content{
     max-width:900px;
-    width:100%;
+    position:relative;
+    z-index:2;
 }
 
 .badge{
     display:inline-block;
-    padding:8px 16px;
+    padding:9px 18px;
     border:1px solid rgba(255,255,255,.3);
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:20px;
+    border-radius:50px;
     background:rgba(255,255,255,.08);
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:22px;
 }
 
-h1{
-    font-size:clamp(42px,10vw,90px);
-    line-height:1;
+.logo{
+    font-size:clamp(55px,14vw,120px);
+    line-height:.9;
     font-weight:900;
-    letter-spacing:-3px;
-    margin-bottom:20px;
+    letter-spacing:-5px;
+    margin-bottom:18px;
+    background:linear-gradient(90deg,#fff,#ffd0f0,#dca2ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.hero p{
+.tagline{
+    font-size:clamp(18px,4vw,25px);
+    color:#eee;
+    margin-bottom:18px;
+}
+
+.hero-date{
     font-size:18px;
-    color:#ddd;
-    max-width:650px;
-    margin:0 auto 30px;
+    font-weight:bold;
+    color:#ffd6ef;
+    margin-bottom:30px;
 }
 
 .buttons{
     display:flex;
-    gap:12px;
     justify-content:center;
+    gap:12px;
     flex-wrap:wrap;
 }
 
@@ -72,81 +118,252 @@ h1{
     display:inline-block;
     text-decoration:none;
     padding:14px 25px;
-    border-radius:30px;
+    border-radius:50px;
     font-weight:bold;
-    color:white;
-    background:#e91e63;
+    background:linear-gradient(90deg,#ff277f,#a42cff);
+    box-shadow:0 10px 30px rgba(255,39,127,.25);
 }
 
 .btn.secondary{
-    background:rgba(255,255,255,.1);
+    background:rgba(255,255,255,.09);
     border:1px solid rgba(255,255,255,.25);
+    box-shadow:none;
 }
 
 section{
-    padding:65px 20px;
+    padding:75px 20px;
 }
 
-.section-container{
-    max-width:1000px;
+.container{
+    max-width:1050px;
     margin:auto;
 }
 
 .section-title{
-    font-size:35px;
-    margin-bottom:30px;
     text-align:center;
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#aaa;
+    max-width:650px;
+    margin:0 auto 35px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
     gap:18px;
 }
 
 .card{
-    background:#151515;
-    border:1px solid #292929;
-    padding:25px;
-    border-radius:20px;
+    background:linear-gradient(145deg,#17121c,#0e0b11);
+    border:1px solid #2c2234;
+    padding:26px;
+    border-radius:22px;
 }
 
 .card h3{
-    margin-bottom:8px;
-    font-size:20px;
+    font-size:21px;
+    margin-bottom:7px;
 }
 
 .card p{
-    color:#bbb;
+    color:#aaa;
 }
 
-.ticket{
+.icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+/* DETAILS */
+
+.details{
+    background:#0d0910;
+}
+
+.detail-card{
     text-align:center;
-    background:linear-gradient(135deg,#8e24aa,#e91e63);
+}
+
+.detail-card strong{
+    display:block;
+    font-size:19px;
+    margin-bottom:4px;
+}
+
+.detail-card span{
+    color:#aaa;
+}
+
+/* TICKETS */
+
+.tickets{
+    background:
+        radial-gradient(circle at center,#3d0b52 0%,#15091c 45%,#08050b 100%);
+}
+
+.ticket-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    margin-top:35px;
+}
+
+.ticket-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
     border-radius:25px;
-    padding:40px 20px;
+    padding:30px 24px;
+    text-align:center;
+}
+
+.ticket-card.featured{
+    border:1px solid #ff3b91;
+    transform:translateY(-5px);
+    box-shadow:0 15px 50px rgba(255,39,127,.18);
+}
+
+.ticket-name{
+    font-size:25px;
+    font-weight:bold;
 }
 
 .price{
-    font-size:50px;
+    font-size:48px;
     font-weight:900;
-    margin:10px 0;
+    margin:12px 0 4px;
+}
+
+.people{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+.ticket-card ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.ticket-card li{
+    margin:9px 0;
+    color:#ddd;
+}
+
+/* PRIZES */
+
+.prizes{
+    background:#0d0910;
+}
+
+.prize{
+    text-align:center;
+}
+
+.prize-money{
+    font-size:34px;
+    font-weight:900;
+    margin:8px 0;
+}
+
+.prize-name{
+    color:#aaa;
+}
+
+/* PAYMENT */
+
+.payment-box{
+    max-width:600px;
+    margin:35px auto 0;
+    padding:30px;
+    border-radius:25px;
+    background:linear-gradient(145deg,#17121c,#0d0910);
+    border:1px solid #30233a;
+    text-align:center;
+}
+
+.qr{
+    width:min(300px,90%);
+    display:block;
+    margin:25px auto;
+    border-radius:18px;
+    background:#fff;
+    padding:10px;
+}
+
+.payment-note{
+    color:#bbb;
+    margin-bottom:20px;
+}
+
+/* VENUE */
+
+.venue-box{
+    background:linear-gradient(135deg,#321040,#17091f);
+    border-radius:28px;
+    padding:35px 25px;
+    text-align:center;
+    border:1px solid #492455;
+}
+
+.address{
+    color:#ccc;
+    margin:15px auto 25px;
+    max-width:650px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:25px;
 }
 
 footer{
-    padding:30px 20px;
+    padding:35px 20px;
     text-align:center;
-    color:#888;
-    border-top:1px solid #222;
+    color:#777;
+    border-top:1px solid #211a26;
+    background:#060408;
+}
+
+.small{
+    font-size:13px;
+    color:#666;
+    margin-top:8px;
 }
 
 @media(max-width:600px){
-    h1{
-        letter-spacing:-2px;
+
+    section{
+        padding:60px 16px;
     }
 
-    .hero p{
-        font-size:16px;
+    .logo{
+        letter-spacing:-3px;
+    }
+
+    .section-title{
+        font-size:31px;
+    }
+
+    .ticket-card.featured{
+        transform:none;
+    }
+
+    .price{
+        font-size:42px;
     }
 }
 </style>
@@ -154,58 +371,77 @@ footer{
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
+
 <header class="hero">
-<div class="container">
 
-<div class="badge">✨ HUBLI'S BIGGEST DANDIYA NIGHT</div>
+<div class="hero-content">
 
-<h1>DANDIYA<br>RAAS 2026</h1>
+<div class="badge">HUBBALLI • 2026</div>
 
-<p>
-Get ready for an unforgettable night of music, dance,
-energy and celebration!
+<h1 class="logo">RAAZ<br>UTSAV</h1>
+
+<p class="tagline">
+Dandiya • Garba • Music • Celebration
+</p>
+
+<p class="hero-date">
+16–17 OCTOBER 2026 • 6:00 PM ONWARDS
 </p>
 
 <div class="buttons">
-<a href="#tickets" class="btn">GET TICKETS</a>
+
+<a href="#tickets" class="btn">
+GET TICKETS
+</a>
 
 <a href="#details" class="btn secondary">
 EVENT DETAILS
 </a>
+
 </div>
 
 </div>
+
 </header>
 
 
 <!-- EVENT DETAILS -->
-<section id="details">
 
-<div class="section-container">
+<section class="details" id="details">
 
-<h2 class="section-title">Event Details</h2>
+<div class="container">
+
+<h2 class="section-title">The Celebration</h2>
+
+<p class="section-subtitle">
+Two unforgettable evenings of Dandiya, Garba, music, prizes and celebration in Hubballi.
+</p>
 
 <div class="cards">
 
-<div class="card">
-<h3>📅 Date</h3>
-<p>04 October 2026</p>
+<div class="card detail-card">
+<div class="icon">📅</div>
+<strong>DATE</strong>
+<span>16–17 October 2026</span>
 </div>
 
-<div class="card">
-<h3>⏰ Time</h3>
-<p>Coming Soon</p>
+<div class="card detail-card">
+<div class="icon">⏰</div>
+<strong>TIME</strong>
+<span>6:00 PM onwards</span>
 </div>
 
-<div class="card">
-<h3>📍 Venue</h3>
-<p>Hubli, Karnataka</p>
+<div class="card detail-card">
+<div class="icon">📍</div>
+<strong>VENUE</strong>
+<span>Akshay Park Ground, Hubballi</span>
 </div>
 
-<div class="card">
-<h3>🎶 Experience</h3>
-<p>Dandiya • Garba • Music • Entertainment</p>
+<div class="card detail-card">
+<div class="icon">💃</div>
+<strong>EXPERIENCE</strong>
+<span>Dandiya • Garba • Music • Entertainment</span>
 </div>
 
 </div>
@@ -216,28 +452,98 @@ EVENT DETAILS
 
 
 <!-- TICKETS -->
-<section id="tickets">
 
-<div class="section-container">
+<section class="tickets" id="tickets">
 
-<div class="ticket">
+<div class="container">
 
-<h2>🎟️ Get Your Tickets</h2>
+<h2 class="section-title">Choose Your Ticket</h2>
 
-<p>Don't miss the celebration!</p>
+<p class="section-subtitle">
+Pick your ticket and get ready for RAAZ UTSAV.
+</p>
 
-<div class="price">₹499</div>
+<div class="ticket-grid">
 
-<p>Ticket price — Update this before publishing</p>
+<!-- STAG -->
 
-<br>
+<div class="ticket-card">
 
-<a
-href="https://instagram.com/"
-class="btn"
+<div class="ticket-name">STAG</div>
+
+<div class="price">₹299</div>
+
+<div class="people">1 Person</div>
+
+<ul>
+<li>✓ Entry to RAAZ UTSAV</li>
+<li>✓ Dandiya sticks</li>
+<li>✓ Complimentary cold beverage</li>
+<li>✓ Access to food stalls</li>
+<li>✓ Selfie spots & ambience</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/918088313438?text=Hi%2C%20I%20want%20to%20book%20a%20STAG%20ticket%20for%20RAAZ%20UTSAV."
 target="_blank">
-BOOK / ENQUIRE
+BOOK STAG
 </a>
+
+</div>
+
+
+<!-- COUPLE -->
+
+<div class="ticket-card featured">
+
+<div class="ticket-name">COUPLE</div>
+
+<div class="price">₹549</div>
+
+<div class="people">2 People</div>
+
+<ul>
+<li>✓ Entry for 2 people</li>
+<li>✓ Dandiya sticks</li>
+<li>✓ Complimentary cold beverages</li>
+<li>✓ Access to food stalls</li>
+<li>✓ Selfie spots & ambience</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/918088313438?text=Hi%2C%20I%20want%20to%20book%20a%20COUPLE%20ticket%20for%20RAAZ%20UTSAV."
+target="_blank">
+BOOK COUPLE
+</a>
+
+</div>
+
+
+<!-- GROUP -->
+
+<div class="ticket-card">
+
+<div class="ticket-name">GROUP</div>
+
+<div class="price">₹1,099</div>
+
+<div class="people">5 People</div>
+
+<ul>
+<li>✓ Entry for 5 people</li>
+<li>✓ Dandiya sticks</li>
+<li>✓ Complimentary cold beverages</li>
+<li>✓ Access to food stalls</li>
+<li>✓ Selfie spots & ambience</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/918088313438?text=Hi%2C%20I%20want%20to%20book%20a%20GROUP%20ticket%20for%20RAAZ%20UTSAV."
+target="_blank">
+BOOK GROUP
+</a>
+
+</div>
 
 </div>
 
@@ -246,29 +552,172 @@ BOOK / ENQUIRE
 </section>
 
 
-<!-- HIGHLIGHTS -->
+<!-- WHAT TO EXPECT -->
+
 <section>
 
-<div class="section-container">
+<div class="container">
 
-<h2 class="section-title">What To Expect</h2>
+<h2 class="section-title">What's Waiting For You?</h2>
+
+<p class="section-subtitle">
+Come with your friends and family and make the night unforgettable.
+</p>
 
 <div class="cards">
 
 <div class="card">
-<h3>💃 Dandiya & Garba</h3>
-<p>Dance the night away with friends and family.</p>
+<div class="icon">🥁</div>
+<h3>Dandiya & Garba</h3>
+<p>Dance, celebrate and enjoy the festive energy.</p>
 </div>
 
 <div class="card">
-<h3>🎵 Live Entertainment</h3>
-<p>Music and entertainment throughout the event.</p>
+<div class="icon">🥤</div>
+<h3>Complimentary Drinks</h3>
+<p>Cold beverages included with your ticket.</p>
 </div>
 
 <div class="card">
-<h3>✨ Celebration</h3>
-<p>A night filled with energy, colours and memories.</p>
+<div class="icon">🍴</div>
+<h3>Food Stalls</h3>
+<p>Enjoy food and refreshments at the venue.</p>
 </div>
+
+<div class="card">
+<div class="icon">📸</div>
+<h3>Selfie Spots</h3>
+<p>Capture your best RAAZ UTSAV moments.</p>
+</div>
+
+<div class="card">
+<div class="icon">👨‍👩‍👧‍👦</div>
+<h3>Family Friendly</h3>
+<p>A celebration designed for friends and families.</p>
+</div>
+
+<div class="card">
+<div class="icon">✨</div>
+<h3>Private Space & Ambience</h3>
+<p>Enjoy the festive atmosphere with your people.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRIZES -->
+
+<section class="prizes">
+
+<div class="container">
+
+<h2 class="section-title">Win Big at RAAZ UTSAV</h2>
+
+<p class="section-subtitle">
+Bring your best moves. Amazing prizes are waiting.
+</p>
+
+<div class="cards">
+
+<div class="card prize">
+<div class="icon">🏆</div>
+<h3>Best Dancer</h3>
+<div class="prize-money">₹1,00,000</div>
+<div class="prize-name">Prize</div>
+</div>
+
+<div class="card prize">
+<div class="icon">💃❤️🕺</div>
+<h3>Best Couple</h3>
+<div class="prize-money">₹70,000</div>
+<div class="prize-name">Prize</div>
+</div>
+
+<div class="card prize">
+<div class="icon">👥</div>
+<h3>Best Group</h3>
+<div class="prize-money">₹50,000</div>
+<div class="prize-name">Prize</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+
+<section id="payment">
+
+<div class="container">
+
+<h2 class="section-title">Pay & Confirm Your Ticket</h2>
+
+<p class="section-subtitle">
+Scan the QR code below to make your ticket payment.
+</p>
+
+<div class="payment-box">
+
+<h3>RAAZ UTSAV PAYMENT QR</h3>
+
+<img
+src="qr.png"
+alt="RAAZ UTSAV payment QR code"
+class="qr"
+>
+
+<p class="payment-note">
+After completing the payment, keep your payment screenshot ready and contact us on WhatsApp for ticket confirmation.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn"
+href="https://wa.me/918088313438?text=Hi%2C%20I%20have%20completed%20my%20RAAZ%20UTSAV%20ticket%20payment.%20I%20want%20to%20confirm%20my%20ticket."
+target="_blank">
+CONFIRM ON WHATSAPP
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VENUE -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Find The Venue</h2>
+
+<div class="venue-box">
+
+<h2>📍 Akshay Park Ground</h2>
+
+<p class="address">
+Behind Chetana College, Phase 4,<br>
+Akshay Colony, Hubballi, Karnataka 580021
+</p>
+
+<a
+class="btn"
+href="https://maps.app.goo.gl/2PqgGWqV2Wab7Gta8"
+target="_blank">
+OPEN IN GOOGLE MAPS
+</a>
 
 </div>
 
@@ -278,26 +727,45 @@ BOOK / ENQUIRE
 
 
 <!-- CONTACT -->
-<section>
 
-<div class="section-container">
+<section class="contact">
 
-<h2 class="section-title">Have Questions?</h2>
+<div class="container">
 
-<div class="card" style="text-align:center;">
+<h2 class="section-title">Stay Connected</h2>
 
-<p>
-For tickets, enquiries and event updates,
-contact the organizers.
+<p class="section-subtitle">
+Follow RAAZ UTSAV for updates, announcements and event moments.
 </p>
 
-<br>
+<div class="social-buttons">
 
 <a
-href="https://instagram.com/"
 class="btn"
+href="https://instagram.com/raasutsavhubli"
 target="_blank">
-Instagram
+📸 @raasutsavhubli
+</a>
+
+<a
+class="btn secondary"
+href="https://instagram.com/krazyyhai_media.in"
+target="_blank">
+📸 @krazyyhai_media.in
+</a>
+
+<a
+class="btn secondary"
+href="https://wa.me/918088313438"
+target="_blank">
+💬 WhatsApp 8088313438
+</a>
+
+<a
+class="btn secondary"
+href="https://wa.me/919148151061"
+target="_blank">
+💬 WhatsApp 9148151061
 </a>
 
 </div>
@@ -307,13 +775,21 @@ Instagram
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>© 2026 Dandiya Raas • Hubli</p>
+<strong>RAAZ UTSAV</strong>
 
-<p>Powered by Crazy Hey Media</p>
+<div class="small">
+Dandiya • Garba • Music • Celebration
+</div>
+
+<div class="small">
+© 2026 RAAZ UTSAV • Hubballi
+</div>
 
 </footer>
 
 </body>
-  </html>
+    </html>
